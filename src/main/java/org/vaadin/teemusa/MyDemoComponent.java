@@ -26,6 +26,7 @@ public class MyDemoComponent extends VerticalLayout {
 		FormLayout content = new FormLayout();
 		content.addComponent(new TextField("Email"));
 		content.addComponent(new Button("Submit"));
+		content.setMargin(true);
 		panel.setContent(content);
 
 		/* Form panel ContextMenu */
@@ -79,9 +80,14 @@ public class MyDemoComponent extends VerticalLayout {
 			}
 		});
 
+		grid.setWidth("100%");
+		tree.setWidth("100%");
+
 		addComponent(panel);
 		addComponent(grid);
 		addComponent(tree);
+
+		setSpacing(true);
 	}
 
 	@SourceHighlight
